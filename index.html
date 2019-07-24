@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    
+    <title>ShillCoin: The Crypto App</title>
+
+     <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+    0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+    for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+    MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+    mixpanel.init("6977d976518e7a83f763068a42e90277");</script>  
+
+</head>
+
+<!-- this is used to 'reset' all the default browser styles -->
+<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+
+<!-- this is where we put our own styles! -->
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+<body>
+    <!-- our fabulous loader, painstakingly designed -->
+    <div id="loader">
+        <img src="./img/preloader.gif">
+    </div>
+    
+    <!-- the entire app's 'view' (or front-end) lives inside the 'app' div -->
+    <div id="app" class="themeDefault">
+        <div id="header">
+            ShillCoin
+        </div>
+        
+        <!-- main button controls & coinPicker  -->
+        <div id="controls">
+            
+            <div id="authButtons">
+                <button id="logIn">Log In</button><br/><br/>
+                <button id="logOut" disabled>Log Out</button>
+            </div>
+            
+            <div id="coinPicker">
+            <!--  content is dynamically injected here -->
+            </div>
+            
+            <div id="saveState">
+                <button id="memeBreak">Meme Break</button><br/><br/>
+                <button id="refreshData">Refresh Data</button>
+            </div>
+
+        </div>
+        
+        <!-- login state, instructions, and # of coins to show dropdown -->
+        <div id="aboveTable">
+            <div><span id="loginState">You are not logged in</span></div>
+            <div><span id="instructions">click assets to add them to the chart</span></div>
+            <div><span id="numberOfCoinShown">Show: 
+                <select>
+                    <option value="10">Top 10</option>
+                    <option value="20">Top 20</option>
+                    <option value="30">Top 30</option>
+                    <option value="40">Top 40</option>
+                    <option value="50">Top 50</option>
+                </select>
+            </span></div>
+        </div>
+        
+        <!-- the asset table -->
+        <div id="assetTable">
+            <table id="theTable">
+                <tbody>
+                    <tr id="tableHeader">
+                        <th>Symbol</th>
+                        <th>Value</th>
+                        <th>Market Cap</th>
+                        <th>1hr %</th>
+                        <th>24hr %</th>
+                        <th>Sentiment</th>
+                        <th>Fiat-To-Crypto Conversion</th>
+                        <th>Chart</th>
+                    </tr>
+                    <!-- contetent is dynamically injected here -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- the footer -->
+        <div id="footer">
+            <span>theme: </span>
+            <span><a href="#" id="defaultTheme">default</a></span>
+            <span><a href="#" id="foobarTheme">foobar</a></span>
+            <span><a href="#" id="masterHackerTheme">masterhacker</a></span>
+        </div>
+    </div>
+
+    <!-- all of the core functionality of our app live in here -->
+        <script type="text/javascript" src="./js/app.js"></script>
+
+    <!-- #dealWithIt 😎 -->
+
+</body>
+</html>
